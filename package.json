@@ -1,0 +1,23 @@
+{
+  "name": "extractability",
+  "version": "0.0.1",
+  "description": "Suite of tests for content extraction libraries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "content",
+    "extractor",
+    "readability",
+    "tests",
+    "regression",
+    "testing",
+    "suite"
+  ],
+  "author": "Harold Treen",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^2.5.3"
+  }
+}
