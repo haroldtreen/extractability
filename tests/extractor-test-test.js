@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 
-const HtmlLoader = require('../html/loader');
-const Expectations = require('../expectations');
+const HtmlLoader = require('../lib/html-loader');
+const assertions = require('../assertions');
 
 describe('Expectations', () => {
     before((done) => {
@@ -11,7 +11,7 @@ describe('Expectations', () => {
     });
 
     it('each have a matching html file', () => {
-        Expectations.forEach((expectation) => {
+        assertions.forEach((expectation) => {
             assert.isDefined(HtmlLoader.files[expectation.fixture]);
         });
     });

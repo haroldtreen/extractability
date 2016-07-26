@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const Html = require('../html/loader');
+const Html = require('../lib/html-loader');
 
 const path = require('path');
 const fs = require('fs');
