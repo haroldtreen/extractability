@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
 
+const DefaultSuite = require('../lib/default-suite');
 const ExtractorTest = require('../lib/extractor-test');
 const Extractability = require('../index');
 
@@ -14,6 +15,13 @@ const buildReadability = (output) => {
 describe('Extractability', () => {
     beforeEach(() => {
         runner = new Extractability();
+    });
+
+    it('loads the default suite', (done) => {
+        DefaultSuite.load().then((suite) => {
+            assert.equal(runner.getTests(), suite);
+            done();
+        }).catch(done);
     });
 
     it('can be set with custom tests', () => {
